@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+/* ==========================================================================
+   design tokens — 藍色 indigo / washi cream / 紅 vermilion
+   ========================================================================== */
+:root{
+  --ai:        #17253d;   /* page ground */
+  --ai-deep:   #0d1626;   /* depth / shadows */
+  --washi:     #efe8d8;   /* primary text */
+  --washi-dim: #c9c0aa;   /* secondary text */
+  --beni:      #b0473d;   /* accent / links / stamps */
+  --beni-glow: rgba(176, 71, 61, 0.35);
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  min-height: 100vh;
+  background-color: var(--ai);
+  background-image:url(pexels-rainbow-1834809.jpg)
+   
+}
+
+/* ==========================================================================
+   typography
+   ========================================================================== */
+h1{
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  font-size: clamp(1.9rem, 5.5vw, 2.6rem);
+  letter-spacing: 0.06em;
+  color: var(--washi);
+  border-bottom: 1px solid rgba(239,232,216,0.22);
+  padding-bottom: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+p{
+  font-weight: 300;
+  font-size: 1.02rem;
+  line-height: 2.15;
+  letter-spacing: 0.03em;
+  color: var(--washi);
+  text-align: justify;
+  max-width: 640px;
+}
+
+p::first-letter{
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--beni);
+}
+
+a{
+  color: var(--beni);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+a:hover,
+a:focus-visible{
+  border-color: var(--beni);
+}
